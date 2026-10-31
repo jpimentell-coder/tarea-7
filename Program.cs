@@ -11,7 +11,7 @@ namespace RegistroEmpleados
         public decimal SalarioBase { get; set; }
         public int HorasExtra { get; set; }
 
-        // Salario base + horas extra a Q50.00 cada una
+      
         public decimal PagoTotal()
         {
             return SalarioBase + HorasExtra * 50.00m;
@@ -55,7 +55,8 @@ namespace RegistroEmpleados
             } while (opcion != "5");
         }
 
-        // Imprime el menú y retorna la opción elegida
+
+    
         private static string LeerOpcionMenu()
         {
             Console.WriteLine();
@@ -71,7 +72,7 @@ namespace RegistroEmpleados
             return opcion == null ? "" : opcion.Trim();
         }
 
-        // El Id autoincremental se pasa por referencia (ref)
+
         private static void AgregarEmpleado(List<Empleado> empleados, ref int siguienteId)
         {
             Console.Write("Nombre: ");
@@ -168,7 +169,7 @@ namespace RegistroEmpleados
             Console.WriteLine($"{n}! = {Factorial(n)}");
         }
 
-        // Función recursiva
+       
         private static long Factorial(int n)
         {
             if (n <= 1)
